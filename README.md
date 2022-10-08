@@ -13,5 +13,7 @@ dyncExpose({
     // If the element is exposed, the callback function will be triggered
   },
 });
+
+<div id="my_dom_isRepeat">xxx</div>
 ```
 
