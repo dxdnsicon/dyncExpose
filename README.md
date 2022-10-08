@@ -2,7 +2,7 @@
 
 ### example:
 ```
-import dyncExpose from 'dyncExpose';
+import dyncExpose from 'dync_expose';
 const exposeId = 'my_dom_isRepeat';  // If the id contains 'isRepeat', repeated exposure after the callback will still trigger the callback;
 
 dyncExpose({
