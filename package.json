@@ -1,6 +1,6 @@
 {
   "name": "dync_expose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "dynamic expose for Web. mobile, support 'IntersectionObserver' and 'Scroll'",
   "scripts": {
     "dev": "tsc -w & babel src  --extensions '.js' --out-dir es -w",
@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/dxdnsicon/dyncExpose.git"
   },
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "files": [
     "es",
     "CHANGELOG.md"
