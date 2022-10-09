@@ -1,6 +1,6 @@
 {
   "name": "dync_expose",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "dynamic expose for Web. mobile, support 'IntersectionObserver' and 'Scroll'",
   "scripts": {
     "dev": "tsc -w & babel src  --extensions '.js' --out-dir es -w",

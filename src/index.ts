@@ -2,7 +2,7 @@
  * @Author: shiningding <shiningding@tencent.com>
  * @Date: 2021-09-17 11:30:36
  * @--------------------------------------------------:
- * @LastEditTime: 2022-10-08 16:08:39
+ * @LastEditTime: 2022-10-09 16:19:08
  * @Modified By: shiningding <shiningding@tencent.com>
  * @---------------------------------------------------:
  * @Description: dynamic expose, support 'IntersectionObserver' and 'Scroll'
@@ -87,14 +87,12 @@ if (window?.IntersectionObserver) {
 
 export default function({
   id,
-  target,
   parent,
   cb,
   threshold,
   useScroll,
 }: {
   id: string;
-  target: HTMLElement;
   parent: HTMLElement | null;
   cb: (isHide?: boolean) => void;
   threshold?: number;
@@ -102,7 +100,7 @@ export default function({
 }) {
   const isRepeat = id.indexOf('isRepeat') > -1; // If the id contains 'isRepeat', repeated exposure after the callback will still trigger the callback;
   const isHide = id.indexOf('isHide') > -1; // If the id contains 'isHide', it also needs to trigger a callback when it is hidden.
-  const dom = target;
+  const dom = document.querySelector(`#${id}`);
   const ratio = isHide ? 0 : threshold || 0.5;
   const wrap = parent || document;
   if (!dom) {
